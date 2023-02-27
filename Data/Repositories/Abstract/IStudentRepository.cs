@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Data.Repositories.Abstract
 {
-    public interface IGroupRepository : IRepository<Group>
+    public interface IStudentRepository : IRepository<Student>
     {
-        Group GetByName(string name);
-
+        bool IsDublicated(string email);
     }
 }

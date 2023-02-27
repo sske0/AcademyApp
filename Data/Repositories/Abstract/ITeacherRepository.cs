@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace Data.Repositories.Abstract
 {
-    public interface IGroupRepository : IRepository<Group>
+    public interface ITeacherRepository : IRepository<Teacher>
     {
-        Group GetByName(string name);
-
     }
 }
