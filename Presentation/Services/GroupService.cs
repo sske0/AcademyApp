@@ -267,12 +267,13 @@ namespace Presentation.Services
             }
             else
             {
-            EnterGroupName: ConsoleHelper.WriteWithColor("enter group name: ", ConsoleColor.DarkCyan);
+                EnterGroupName: ConsoleHelper.WriteWithColor("enter group name: ", ConsoleColor.DarkCyan);
                 string name = Console.ReadLine();
                 var group = _groupRepository.GetByName(name);
                 if (group is null)
                 {
                     ConsoleHelper.WriteWithColor("No such a group with this name", ConsoleColor.Red);
+                    goto EnterGroupName;
                 }
                 InternalUpdate(group, admin);
             }
